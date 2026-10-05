@@ -1,13 +1,13 @@
+// kategory hanya boleh salah satu dari 4 ini
 export type Category = "Buku" | "Elektronik" | "Fashion" | "Perabot Kos";
 
-export type Condition = "Seperti baru" | "Baik" | "Layak pakai";
-
+// bentuk setiap barang
 export interface Product {
-  readonly id: string;
+  readonly id: string; // readonly = tidak bisa diubah setelah dibuat
   title: string;
   price: number;
   seller: string;
   category: Category;
-  condition: Condition;
-  faculty?: string; 
+  condition: string;
+  faculty?: string; // tanda ? = opsional
 }

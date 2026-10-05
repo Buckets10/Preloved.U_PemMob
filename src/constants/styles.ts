@@ -1,45 +1,78 @@
 import { StyleSheet } from "react-native";
 
+// style ditulis di file terpisah
 export const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: "#F4F6FA" },
-  content: { padding: 20, paddingTop: 56 },
-  header: { flexDirection: "row", alignItems: "center", marginBottom: 4 },
-  brand: { fontSize: 28, fontWeight: "bold", color: "#14213D", marginLeft: 8 },
-  tagline: { fontSize: 14, color: "#6B7280", marginBottom: 20 },
+  container: {
+    flex: 1,
+    backgroundColor: "#F4F6FA",
+    padding: 20,
+    paddingTop: 50,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#14213D",
+  },
+  subtitle: {
+    fontSize: 14,
+    color: "#6B7280",
+    marginBottom: 16,
+  },
+  statBox: {
+    backgroundColor: "#14213D",
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 8,
+  },
+  statValue: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "#FCA311",
+  },
+  statLabel: {
+    fontSize: 12,
+    color: "white",
+  },
   sectionTitle: {
     fontSize: 18,
     fontWeight: "bold",
     color: "#14213D",
-    marginTop: 24,
-    marginBottom: 12,
+    marginTop: 12,
+    marginBottom: 8,
   },
-  statsRow: { flexDirection: "row", justifyContent: "space-between" },
-  statBox: {
-    flex: 1,
-    backgroundColor: "#14213D",
-    borderRadius: 12,
-    padding: 14,
-    marginRight: 8,
-  },
-  statValue: { fontSize: 20, fontWeight: "bold", color: "#FCA311" },
-  statLabel: { fontSize: 12, color: "#E5E7EB", marginTop: 2 },
   card: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "white",
     borderRadius: 14,
     padding: 16,
     marginBottom: 12,
     elevation: 3,
     shadowColor: "#000",
   },
-  cardTitle: { fontSize: 16, fontWeight: "bold", color: "#14213D" },
-  cardPrice: { fontSize: 16, fontWeight: "bold", color: "#B45309", marginTop: 4 },
-  cardMeta: { fontSize: 13, color: "#6B7280", marginTop: 2 },
-  buyButton: {
+  cardTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#14213D",
+  },
+  cardPrice: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#B45309",
+    marginTop: 4,
+  },
+  cardInfo: {
+    fontSize: 13,
+    color: "#6B7280",
+    marginTop: 2,
+  },
+  button: {
     backgroundColor: "#FCA311",
     borderRadius: 10,
-    paddingVertical: 10,
-    marginTop: 12,
+    padding: 10,
+    marginTop: 10,
     alignItems: "center",
   },
-  buyButtonText: { fontWeight: "bold", color: "#14213D" },
+  buttonText: {
+    fontWeight: "bold",
+    color: "#14213D",
+  },
 });
