@@ -4,9 +4,9 @@ import { styles } from "@/constants/styles"; // external style
 import { Category, Product } from "@/constants/types";
 
 const products: Product[] = [
-  { id: "1", title: "Kalkulus Jilid 1", price: 45000, seller: "Rina", category: "Buku", condition: "Baik", faculty: "Teknik" },
-  { id: "2", title: "Kipas Angin Mini", price: 35000, seller: "Dimas", category: "Perabot Kos", condition: "Seperti baru" },
-  { id: "3", title: "Jaket Almamater", price: 90000, seller: "Salsa", category: "Fashion", condition: "Baik", faculty: "FEB" },
+  { id: "1", title: "Kalkulus Jilid 1", price: 45000, seller: "Rafi", category: "Buku", condition: "Baik", faculty: "Teknik" },
+  { id: "2", title: "Kipas Angin Mini", price: 35000, seller: "Rivan", category: "Perabot Kos", condition: "Seperti baru" },
+  { id: "3", title: "Jaket Almamater", price: 90000, seller: "Farhan", category: "Fashion", condition: "Baik", faculty: "FEB" },
   { id: "4", title: "Mouse Wireless", price: 60000, seller: "Fajar", category: "Elektronik", condition: "Layak pakai", faculty: "Teknik" },
 ];
 
