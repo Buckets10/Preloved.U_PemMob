@@ -1,17 +1,34 @@
-import { formatPrice, products } from "@/constants/data";
+import { formatPrice } from "@/constants/data";
 import { styles } from "@/constants/styles";
+import { Product } from "@/constants/types";
+import { fetchProductById } from "@/services/productService";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { useState } from "react";
-import { Pressable, Text, View } from "react-native";
+import { useEffect, useState } from "react";
+import { ActivityIndicator, Pressable, Text, View } from "react-native";
 
 export default function Detail() {
   const router = useRouter();
 
   const { id } = useLocalSearchParams();
-  const product = products.find((p) => p.id === id);
+  const [product, setProduct] = useState<Product | undefined>();
+  const [loading, setLoading] = useState(true);
   const [isFavorite, setIsFavorite] = useState(false);
 
-  
+  // async/await: tunggu hasil fetch sebelum lanjut
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const result = await fetchProductById(String(id));
+        setProduct(result);
+      } catch {
+        setProduct(undefined);
+      } finally {
+        setLoading(false);
+      }
+    };
+    load();
+  }, [id]);
+
   const goBack = () => {
     if (router.canGoBack()) {
       router.back();
@@ -19,6 +36,14 @@ export default function Detail() {
       router.push("/");
     }
   };
+
+  if (loading) {
+    return (
+      <View style={styles.container}>
+        <ActivityIndicator size="large" color="#FCA311" />
+      </View>
+    );
+  }
 
   if (!product) {
     return (
